@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />  
+<title>jquery实现锚点跳转平滑滚动效果</title>  
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/JavaScript">  
+$(document).ready(function() {  
+    $('a[href*=#]').click(function() {  
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
+            var $target = $(this.hash);  
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');  
+            if ($target.length) {  
+                var targetOffset = $target.offset().top;  
+                $('html,body').animate({  
+                    scrollTop: targetOffset  
+                },700);  
+                return false;  
+            }  
+        }  
+    });  
+});  
+</script>  
+</head>  
+  
+<body>  
+  
+<p>222</p>  
+<p id="top">top</p>  
+<p><a href="#bottom">滑动到底部</a></p>  
+<p><a href="#zhan">滑动到冒出一区</a></p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p id="zhan">8qw798798789qwe98</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p>222</p>  
+<p id="bottom">bottom</p>  
+<p><a href="#top">top</a></p>  
+<p>0</p>  
+  
+</body>  
+  
+</html>  

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1.jQuery自动改变文字大小代码</title>
+    <style>
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        line-height: normal;
+        margin: 5%;
+        padding: 0;
+        background: black;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    h1 {
+        font-weight: 300;
+        line-height: 150%;
+        color: gray;
+    }
+    
+    a {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px 20px;
+        font-size: 13px;
+        line-height: 13px;
+        text-decoration: none;
+        color: black;
+        background: white;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+    
+    a:hover {
+        background: gray;
+    }
+    
+    b {
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <h1><b>调整浏览器大小查看效果</b>为确保广大用户能够正常便捷地使用下载资源，17素材网对于用户上传的所有资源都会进行审核。以下资源将不会被审核通过。<br>
+1.资源包含中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的内容，包括但不限于以下情形：<br>
+
+反对宪法所确定的基本原则的；<br>
+
+危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；<br>
+
+损害国家荣誉和利益的；<br>
+
+煽动民族仇恨、民族歧视、破坏民族团结的；<br>
+
+破坏国家宗教政策，宣扬邪教和封建迷信的；<br>
+
+散布谣言，扰乱社会秩序，破坏社会稳定的；<br>
+
+散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；<br>
+
+侮辱或者诽谤他人，侵害他人合法权利的；<br>
+
+煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；
+</h1>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script>
+    (function($) {
+
+        $.fn.fontFlex = function(min, max, mid) {
+
+            var $this = this;
+
+            $(window).resize(function() {
+
+                var size = window.innerWidth / mid;
+
+                if (size < min) size = min;
+                if (size > max) size = max;
+
+                $this.css('font-size', size + 'px');
+
+            }).trigger('resize');
+        };
+
+    })(jQuery);
+    </script>
+    <script type="text/javascript">
+    $(function() {
+        $('h1').fontFlex(20, 60, 40);
+    });
+    </script>
+</body>
+
+</html>
